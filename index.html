@@ -3,27 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dipa</title>
+    <meta name="description" content="A short letter from Artie, founder of Dipa, on why most affirmations never stick, and what we built instead.">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#f7f2e8">
+    <title>Dipa - Keep your word</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon.png">
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
+        /*
+          Dipa Theme (light): matches app Swift tokens:
+          background #f7f2e8, charcoal #262626, accentNeutral #d9d1c7, warmAccent #d9a638,
+          AppScreenBackground radial: center #ecd4b9 to edge #f2f2e2
+        */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        html {
+            -webkit-text-size-adjust: 100%;
+            color-scheme: light;
         }
         body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: ui-sans-serif, system-ui, sans-serif;
-            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-            color: #1d1d1f;
-            background: #fff;
+            margin: 0;
+            min-height: 100dvh;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+            font-size: clamp(1.0625rem, 0.25vw + 1rem, 1.125rem);
+            line-height: 1.6;
+            color: #262626;
+            /* AppScreenBackground.lightReferenceRadial */
+            background-color: #f2f2e2;
+            background-image: radial-gradient(
+                circle at 50% 50%,
+                rgb(236, 220, 185) 20px,
+                rgb(242, 242, 226) min(400px, 85vmin)
+            );
+            background-attachment: fixed;
+        }
+        main {
+            max-width: min(36rem, 92vw);
+            margin: 0 auto;
+            padding: clamp(3rem, 8vw, 5.5rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 10vw, 6rem);
+        }
+        h1 {
+            margin: 0 0 2.25rem;
+            font-size: clamp(1.25rem, 0.5vw + 1.1rem, 1.375rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+            color: #262626;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid rgb(217, 166, 56);
         }
         p {
             margin: 0;
         }
+        .letter p + p {
+            margin-top: 1.125em;
+        }
+        .signature {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #d9d1c7;
+        }
+        .signature p {
+            margin: 0;
+        }
+        .signature .name {
+            margin-top: 0.35em;
+            font-weight: 500;
+            color: #262626;
+        }
     </style>
 </head>
 <body>
-    <p>Dipa is coming soon...</p>
+    <main>
+        <h1>A note from the founder</h1>
+        <article class="letter">
+            <p>For a long time, this corner of software sold the same idea: repeat a bright line until you believe it. When nothing changes, the blame lands on you. You didn’t want it enough.</p>
+            <p>That story never sat right. The research backs the discomfort. When someone already feels low about themselves, empty cheer can make things worse. That isn’t a hot take. It shows up again and again in the work.</p>
+            <p>If you’ve tried affirmations and walked away thinking the failure was personal, I understand. I thought that too.</p>
+            <p>Here’s what took me longer than it should have. The words weren’t failing you. They weren’t built for your situation. They were borrowed wallpaper, fine for someone else’s life, not tethered to what you want, what actually gets in your way, or what you’ll do the next time the old pattern shows up.</p>
+            <p>Dipa is our answer to that gap.</p>
+            <p>You take a few minutes for one guided reflection. Not a stiff form. A straight conversation with yourself: what you want, what “good” would look like, the obstacle that keeps appearing on the inside, and a concrete if-then plan for when it does.</p>
+            <p>From that, you get three short lines tied to what you actually said. Specific. Yours. The kind you can repeat without feeling like you’re lying to yourself.</p>
+            <p>Those lines find you again in the morning, on your lock screen, in the quiet parts of the day, nudged when your obstacle is most likely to show up. Not louder. Just present. The goal isn’t a pep talk. It’s clarity you had to earn.</p>
+            <p>The backbone is twenty years of psychology research: twenty-one studies, thousands of people. The boring through-line: name the real inner block, then pair it with a plan you can run when it appears. Skip that step and the pretty lines don’t hold.</p>
+            <p>We built Dipa because the category rarely rewards this. Hard questions before easy comfort. Language worth keeping because you did the work to produce it.</p>
+            <p>If we do our job, you stop borrowing words. You trust what you say to yourself. You keep the word you gave yourself.</p>
+        </article>
+        <footer class="signature">
+            <p class="name">Artie, Founder of Dipa</p>
+        </footer>
+    </main>
 </body>
 </html>
