@@ -1,15 +1,38 @@
-/* Dipa shared site styles */
+/* Dipa shared site styles — aligned with the app's neutral light/dark theme */
+:root {
+    color-scheme: light dark;
+    --background: #f7f7f7;
+    --secondary-surface: #ffffff;
+    --accent-neutral: #d6d6d6;
+    --interactive-accent: #1a1a1a;
+    --charcoal: #262626;
+    --muted-text: #626262;
+    --card-shadow: rgba(0, 0, 0, 0.06);
+    --gradient-center: #e0e0e0;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #171717;
+        --secondary-surface: #242424;
+        --accent-neutral: #616161;
+        --interactive-accent: #e6e6e6;
+        --charcoal: #ebebeb;
+        --muted-text: #b3b3b3;
+        --card-shadow: rgba(0, 0, 0, 0.55);
+        --gradient-center: #0f0f0f;
+    }
+}
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; color-scheme: light; }
+html { -webkit-text-size-adjust: 100%; }
 body {
     margin: 0;
     min-height: 100dvh;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
     font-size: clamp(1.0625rem, 0.25vw + 1rem, 1.125rem);
     line-height: 1.6;
-    color: #262626;
-    background-color: #f2f2e2;
-    background-image: radial-gradient(circle at 50% 50%, rgb(236, 220, 185) 20px, rgb(242, 242, 226) min(400px, 85vmin));
+    color: var(--charcoal);
+    background-color: var(--background);
+    background-image: radial-gradient(circle at 50% 50%, var(--gradient-center) 20px, var(--background) min(400px, 85vmin));
     background-attachment: fixed;
 }
 main {
@@ -24,32 +47,32 @@ h1 {
     font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 1.25;
-    color: #262626;
+    color: var(--charcoal);
     padding-bottom: 0.75rem;
-    border-bottom: 2px solid rgb(217, 166, 56);
+    border-bottom: 2px solid var(--interactive-accent);
 }
-h2 { margin: 2rem 0 0.65rem; font-size: 1.15rem; line-height: 1.3; }
+h2 { margin: 2rem 0 0.65rem; font-size: 1.15rem; line-height: 1.3; color: var(--charcoal); }
 h3 { margin: 1.35rem 0 0.45rem; font-size: 1rem; line-height: 1.35; }
 p { margin: 0; }
-a { color: inherit; text-underline-offset: 0.18em; }
+a { color: var(--charcoal); text-underline-offset: 0.18em; }
 .letter p + p, .legal p + p { margin-top: 1.125em; }
 .legal ul { margin: 0.75rem 0 1.125rem; padding-left: 1.35rem; }
 .legal li + li { margin-top: 0.45rem; }
-.legal-intro { color: #5d5a55; }
-.signature { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #d9d1c7; }
+.legal-intro { color: var(--muted-text); }
+.signature { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--accent-neutral); }
 .signature p { margin: 0; }
-.signature .name { margin-top: 0.35em; font-weight: 500; color: #262626; }
+.signature .name { margin-top: 0.35em; font-weight: 500; color: var(--charcoal); }
 .site-footer {
     max-width: min(45rem, 92vw);
     margin: 0 auto;
     padding: 1.5rem clamp(1.25rem, 4vw, 2rem) 2.25rem;
-    border-top: 1px solid #d9d1c7;
-    color: #5d5a55;
+    border-top: 1px solid var(--accent-neutral);
+    color: var(--muted-text);
     font-size: 0.85rem;
 }
 .site-footer p { margin: 0; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; margin-top: 0.55rem; }
-.site-footer a { color: #262626; }
-.site-footer a:hover, .site-footer a:focus-visible { color: #8a6517; }
+.site-footer a { color: var(--charcoal); }
+.site-footer a:hover, .site-footer a:focus-visible { color: var(--interactive-accent); }
 .back-link { display: inline-block; margin-bottom: 2rem; font-size: 0.9rem; }
 @media (prefers-reduced-motion: no-preference) { a { transition: color 160ms ease-out; } }
