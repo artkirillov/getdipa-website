@@ -8,7 +8,8 @@
     --charcoal: #37312d;
     --muted-text: #726158;
     --card-shadow: rgba(0, 0, 0, 0.06);
-    --gradient-center: #726158;
+    /* Use the lighter endBackground for the page wash; the coffee accent stays in controls and rules. */
+    --gradient-center: #e2dbd3;
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -19,7 +20,7 @@
         --charcoal: #f0e8e0;
         --muted-text: #c9b6a8;
         --card-shadow: rgba(0, 0, 0, 0.55);
-        --gradient-center: #c9b6a8;
+        --gradient-center: #36302c;
     }
 }
 *, *::before, *::after { box-sizing: border-box; }
