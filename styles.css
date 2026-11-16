@@ -1,25 +1,25 @@
-/* Dipa shared site styles — aligned with the app's neutral light/dark theme */
+/* Dipa shared site styles — aligned with the app's Mushroom & Cashmere theme */
 :root {
     color-scheme: light dark;
-    --background: #f7f7f7;
-    --secondary-surface: #ffffff;
-    --accent-neutral: #d6d6d6;
-    --interactive-accent: #1a1a1a;
-    --charcoal: #262626;
-    --muted-text: #626262;
+    --background: #f1ede8;
+    --secondary-surface: #e2dbd3;
+    --accent-neutral: #d2c7bc;
+    --interactive-accent: #726158;
+    --charcoal: #37312d;
+    --muted-text: #726158;
     --card-shadow: rgba(0, 0, 0, 0.06);
-    --gradient-center: #e0e0e0;
+    --gradient-center: #726158;
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #171717;
-        --secondary-surface: #242424;
-        --accent-neutral: #616161;
-        --interactive-accent: #e6e6e6;
-        --charcoal: #ebebeb;
-        --muted-text: #b3b3b3;
+        --background: #24211f;
+        --secondary-surface: #36302c;
+        --accent-neutral: #6d6056;
+        --interactive-accent: #c9b6a8;
+        --charcoal: #f0e8e0;
+        --muted-text: #c9b6a8;
         --card-shadow: rgba(0, 0, 0, 0.55);
-        --gradient-center: #0f0f0f;
+        --gradient-center: #c9b6a8;
     }
 }
 *, *::before, *::after { box-sizing: border-box; }
